@@ -45,9 +45,9 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className={mobileCart ? "w-full h-full bg-black/40 z-0 fixed top-0 lg:hidden" : "duration-500"}></div>
+            <div className={mobileCart ? "w-full h-full bg-black/40 z-0 fixed top-0 lg:hidden" : "duration-500"} onClick={closeCart}></div>
 
-            <div className={mobileCart ? "absolute h-[100vh] w-[86%] bg-gray-800 right-0 top-0 overflow-hidden lg:hidden" : "absolute hidden overflow-hidden"}>
+            <div className={mobileCart ? "absolute h-[100vh] w-[86%] md:w-[45%] bg-gray-800 right-0 top-0 overflow-hidden lg:hidden" : "absolute hidden overflow-hidden"}>
                 <div className='pt-20'>
                     <div className='absolute top-4 right-5 text-gray-100 p-1' >
                         <RiCloseFill className='text-white text-5xl p-1 cursor-pointer' onClick={closeCart} />
