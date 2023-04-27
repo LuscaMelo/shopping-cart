@@ -14,7 +14,7 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="flex mb-2">
+        <div className="flex mb-2 bg-gray-200 lg:bg-white p-1">
             <div className="mr-3">
                 <img src="headphone.jpg" className="w-[100px]" alt="" />
             </div>
@@ -25,9 +25,9 @@ export const ProductCard = () => {
                     <span className="text-sm font-bold">$119.99</span>
                 </div>
                 <div className="flex mt-3">
-                    <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-200 flex justify-center items-center" onClick={removeOfCart}>-</button>
-                    <span className="w-[20px] h-[20px] font-mono bg-gray-100 flex justify-center items-center">{numOfProducts}</span>
-                    <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-200 flex justify-center items-center" onClick={addToCart}>+</button>
+                    <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-300 flex justify-center items-center" onClick={removeOfCart}>-</button>
+                    <span className="w-[20px] h-[20px] font-mono text-[12px] bg-gray-200 border border-gray-300 flex justify-center items-center">{numOfProducts}</span>
+                    <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-300 flex justify-center items-center" onClick={addToCart}>+</button>
                 </div>
             </div>
         </div>

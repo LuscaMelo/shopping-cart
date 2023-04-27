@@ -16,8 +16,8 @@ export const Product = () => {
             <div>
                 <img src="headphone.jpg" className="w-100 h-100 object-cover" alt="headphone product" />
             </div>
-            <div className="px-7 pb-7">
-                <h2 className="text-5xl font-bold mt-5 md:mt-0">Headphone</h2>
+            <div className="px-7 py-16 mb-5 md:py-0">
+                <h2 className="text-5xl font-bold md:mt-0">Headphone</h2>
                 <p className="text-sm mt-5 mb-7 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi corporis corrupti fuga beatae labore temporibus rerum nisi porro suscipit, aliquam earum maiores! Laudantium ullam voluptatem tempora? Dolor rerum omnis voluptatum!</p>
                 <span className="text-3xl font-bold">$119.99</span>
                 <div className='flex mt-6'>
