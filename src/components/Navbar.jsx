@@ -32,7 +32,7 @@ export const Navbar = () => {
                 <div className="container flex justify-between items-center mx-auto px-8 md:px-2">
                     <div className='flex items-center gap-1'>
                         <FaReact className='text-3xl' />
-                        <h1 className='text-bold text-xl'>Tech</h1>
+                        <h1 className='text-bold text-xl'>Cart</h1>
                     </div>
                     <div className='flex items-center gap-4 relative cursor-pointer transition'>
                         <RiNotification3Line className='text-2xl hover:text-blue-300 duration-300' />
@@ -47,7 +47,7 @@ export const Navbar = () => {
 
             <div className={mobileCart ? "w-full h-full bg-black/40 z-0 fixed top-0 lg:hidden" : "duration-500"}></div>
 
-            <div className={mobileCart ? "absolute h-[100vh] w-[80%] bg-gray-800 right-0 top-0 overflow-hidden lg:hidden" : "absolute hidden overflow-hidden"}>
+            <div className={mobileCart ? "absolute h-[100vh] w-[86%] bg-gray-800 right-0 top-0 overflow-hidden lg:hidden" : "absolute hidden overflow-hidden"}>
                 <div className='pt-20'>
                     <div className='absolute top-4 right-5 text-gray-100 p-1' >
                         <RiCloseFill className='text-white text-5xl p-1 cursor-pointer' onClick={closeCart} />
