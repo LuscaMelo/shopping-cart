@@ -1,9 +1,9 @@
 import './App.css'
 
 //Components
-import { Navbar } from './Components/Navbar'
+import { Navbar } from './components/Navbar'
 import { Product } from './components/Product'
-import { Cart } from './Components/Cart'
+import { Cart } from './components/Cart'
 
 //Hooks
 import CartContext from './contexts/CartContext'
