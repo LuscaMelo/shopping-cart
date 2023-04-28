@@ -10,7 +10,7 @@ export const Subtotal = () => {
 
     return (
         <div className="justify-end w-[97%] text-gray-400 border-t-2 border-gray-700 mb-8 p-2 m-2">
-            <div className="flex w-[55%] md:w-[100%] justify-between mt-3 ml-auto">
+            <div className="flex w-[75%] md:w-[100%] justify-between mt-3 ml-auto">
                 <div>
                     <h5 className="font-bold lg:text-gray-700">Sub-Total</h5>
                     <p className="text-xs font-mono mt-[-2px]">{numOfProducts} {item}</p>
@@ -20,7 +20,7 @@ export const Subtotal = () => {
                 </div>
             </div>
             <div className="flex w-[100%] justify-end">
-                <button className="bg-gray-900 text-white w-[55%] mt-6 p-4 font-bold">checkout</button>
+                <button className="bg-gray-900 text-white w-[75%] mt-6 p-4 font-bold hover:bg-gray-950 hover:scale-105 duration-300">checkout</button>
             </div>
         </div>
     )
