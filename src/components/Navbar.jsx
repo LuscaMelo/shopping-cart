@@ -6,17 +6,13 @@ import { RiCloseFill } from 'react-icons/ri'
 import { Cart } from './Cart'
 
 import CartContext from '../contexts/CartContext'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 export const Navbar = () => {
 
-    useEffect(() => {
-        mobileCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
-    },);
+    const { numOfProducts, setMobileCart, mobileCart } = useContext(CartContext)
 
-    const [mobileCart, setMobileCart] = useState(false)
-
-    const { numOfProducts } = useContext(CartContext)
+    const [background, setBackground] = useState("")
 
     function OpenCart() {
         setMobileCart(true)
@@ -26,9 +22,26 @@ export const Navbar = () => {
         setMobileCart(false)
     }
 
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY; // => scroll position
+        if (scrollPosition >= 100) {
+            setBackground("bg-gray-900")
+        } else {
+            setBackground("")
+        }
+    };
+
+    useEffect(() => {
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <div>
-            <div className='w-100 h-[80px] flex items-center bg-gray-900 text-white'>
+            <div className={background ? `${background} duration-300 h-[80px] flex items-center md:bg-gray-900 text-white` : 'duration-300 h-[80px] flex items-center md:bg-gray-900 text-white'}>
                 <div className="container flex justify-between items-center mx-auto px-8 md:px-2">
                     <div className='flex items-center gap-1'>
                         <FaReact className='text-3xl' />

@@ -5,16 +5,17 @@ import { useContext } from 'react'
 
 export const Product = () => {
 
-    const { setNumOfProducts, numOfProducts } = useContext(CartContext)
+    const { setNumOfProducts, numOfProducts, setMobileCart } = useContext(CartContext)
 
     function addToCart() {
         setNumOfProducts(numOfProducts + 1)
+        setMobileCart(true)
     }
 
     return (
         <div className="flex flex-col md:flex-row md:p-4 bg-white">
             <div>
-                <img src="headphone.jpg" className="w-100 h-100 object-cover" alt="headphone product" />
+                <img src="headphone.jpg" className="h-[65vh] md:h-[100%] w-100 object-cover" alt="headphone product" />
             </div>
             <div className="px-7 py-16 mb-5 md:py-0">
                 <h2 className="text-5xl font-bold md:mt-0">Headphone</h2>
@@ -27,8 +28,8 @@ export const Product = () => {
                     <p className='text-gray-600 underline underline-offset-1 mt-[-5px] cursor-pointer'>441 reviews</p>
                 </div>
                 <div className='flex gap-3 mt-4'>
-                    <button className='border-2 border-gray-800 font-bold py-3 px-5'>Buy Now</button>
-                    <button className='bg-gray-900 text-white font-bold py-3 px-5' onClick={addToCart}>Add to Cart</button>
+                    <button className='border-2 border-gray-800 font-bold py-3 px-6 shadow-md shadow-gray-400 scale-95 hover:bg-gray-900 hover:text-white hover:scale-100 duration-300'>Buy Now</button>
+                    <button className='bg-gray-900 text-white font-bold py-3 px-6 shadow-md shadow-gray-400 scale-95 hover:bg-gray-950 hover:scale-105 duration-300' onClick={addToCart}>Add to Cart</button>
                 </div>
             </div>
         </div>

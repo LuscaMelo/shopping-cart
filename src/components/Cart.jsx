@@ -12,9 +12,9 @@ export const Cart = () => {
 
     return (
         <div>
-            <div className="mx-2 lg:mx-4 p-1 md:p-4 border-1 bg-gray-800 lg:bg-white h-[90vh] md:h-auto">
-                <div className='flex items-baseline'>
-                    <BsCart3 className='text-md mr-2 text-white lg:text-black' />
+            <div className="mx-4 lg:mx-4 p-1 md:p-4 border-1 bg-gray-800 lg:bg-white h-[90vh] md:h-auto">
+                <div className='flex items-baseline pl-2'>
+                    <BsCart3 className='text-xl mr-2 text-white lg:text-black' />
                     <h2 className="text-lg font-bold mb-8 text-white lg:text-black" >Order Summary</h2>
                 </div>
                 {numOfProducts == 0 ? <EmptyCart /> : <ProductCard />}

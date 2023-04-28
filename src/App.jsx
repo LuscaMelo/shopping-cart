@@ -7,18 +7,25 @@ import { Cart } from './components/Cart'
 
 //Hooks
 import CartContext from './contexts/CartContext'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function App() {
 
+  useEffect(() => {
+    mobileCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+  },);
+
   const [numOfProducts, setNumOfProducts] = useState(0)
+  const [mobileCart, setMobileCart] = useState(false)
 
   return (
-    <CartContext.Provider value={{ numOfProducts: numOfProducts, setNumOfProducts }}>
+    <CartContext.Provider value={{ numOfProducts: numOfProducts, setNumOfProducts, mobileCart, setMobileCart }}>
       <div className='md:bg-gray-100 h-[100vh]'>
-        <Navbar />
-        <div className='container mx-auto flex md:mt-10'>
+        <div className='fixed top-0 w-full z-50'>
+          <Navbar />
+        </div>
+        <div className='container mx-auto flex md:pt-28'>
           <div className='lg:w-[65%]'>
             <Product />
           </div>
