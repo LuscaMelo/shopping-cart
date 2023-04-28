@@ -13,9 +13,9 @@ export const Product = () => {
     }
 
     return (
-        <div className="flex flex-col md:flex-row md:p-4 bg-white">
+        <div className="flex flex-col md:flex-row md:p-4 lg:p-7 bg-white">
             <div>
-                <img src="headphone.jpg" className="h-[65vh] md:h-[100%] w-100 object-cover" alt="headphone product" />
+                <img src="headphone.jpg" className="h-[65vh] md:h-[100%] w-[100%] object-cover" alt="headphone product" />
             </div>
             <div className="px-7 py-16 mb-5 md:py-0">
                 <h2 className="text-5xl font-bold md:mt-0">Headphone</h2>

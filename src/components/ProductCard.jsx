@@ -18,7 +18,7 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="flex mb-2  bg-gray-300 lg:bg-white p-1">
+        <div className="flex mb-2  bg-gray-500 lg:bg-white p-2">
             <div className="mr-1">
                 <img src="headphone.jpg" className="w-[100px]" alt="" />
             </div>
@@ -29,12 +29,12 @@ export const ProductCard = () => {
                     <span className="text-sm font-bold">$119.99</span>
                 </div>
                 <div className="flex flex-col justify-between items-end">
-                    <div className="flex mt-1 ml-1">
-                        <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-100 flex justify-center items-center" onClick={removeOneProduct}>-</button>
-                        <span className="w-[20px] h-[20px] font-mono text-[12px] bg-slate-200 lg:bg-gray-200 border border-gray-100 flex justify-center items-center">{numOfProducts}</span>
-                        <button className="w-[25px] pb-1 h-[20px] font-bold bg-gray-100 flex justify-center items-center" onClick={addToCart}>+</button>
+                    <div className="flex mt-1 ml-1 rounded-xl px-1 bg-gray-400 lg:bg-gray-200 overflow-hidden">
+                        <button className="w-[25px] pb-1 h-[20px] font-bold flex justify-center text-slate-800 lg:text-slate-600 items-center" onClick={removeOneProduct}>-</button>
+                        <span className="w-[20px] h-[20px] font-mono text-[12px] text-slate-800 lg:text-slate-600 flex justify-center items-center">{numOfProducts}</span>
+                        <button className="w-[25px] pb-1 h-[20px] font-bold flex justify-center text-slate-800 lg:text-slate-600 items-center" onClick={addToCart}>+</button>
                     </div>
-                    <p className='text-bold text-xs underline cursor-pointer pb-3 md:text-red-600' onClick={removeOfCart}>Remove</p>
+                    <p className='text-bold text-xs underline cursor-pointer pb-3 lg:text-red-600' onClick={removeOfCart}>Remove</p>
                 </div>
             </div>
         </div>
