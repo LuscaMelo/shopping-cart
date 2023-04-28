@@ -29,10 +29,10 @@ export const ProductCard = () => {
                     <span className="text-sm font-bold">$119.99</span>
                 </div>
                 <div className="flex flex-col justify-between items-end">
-                    <div className="flex mt-1 ml-1 rounded-xl px-1 bg-gray-400 lg:bg-gray-200 overflow-hidden">
+                    <div className="flex mt-1 ml-1 rounded-xl px-1 w-[80%] bg-gray-400 lg:bg-gray-200 overflow-hidden text-sm">
                         <button className="w-[25px] pb-1 h-[20px] font-bold flex justify-center text-slate-800 lg:text-slate-600 items-center" onClick={removeOneProduct}>-</button>
                         <span className="w-[20px] h-[20px] font-mono text-[12px] text-slate-800 lg:text-slate-600 flex justify-center items-center">{numOfProducts}</span>
-                        <button className="w-[25px] pb-1 h-[20px] font-bold flex justify-center text-slate-800 lg:text-slate-600 items-center" onClick={addToCart}>+</button>
+                        <button className="w-[25px] pb-1 h-[20px] font-bold flex justify-center text-slate-800 lg:text-slate-600 items-center mt-[1px]" onClick={addToCart}>+</button>
                     </div>
                     <p className='text-bold text-xs underline cursor-pointer pb-3 lg:text-red-600' onClick={removeOfCart}>Remove</p>
                 </div>
