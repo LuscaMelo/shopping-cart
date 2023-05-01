@@ -1,9 +1,9 @@
-# Pagina de produto e carrinho de compras
+# Página de produto e carrinho de compras
 
 ## O projeto:
 Uma página de um produto fictício, com as seguintes features:
 
-- Adicionar o prouto ao carrinho de compras;
+- Adicionar o produto ao carrinho de compras;
 - Visualizar a quantidade de produtos;
 - Alterar a quantidade de produtos;
 - Visualizar no carrinho o valor total do pedido, de acordo com a quantidade de itens adicionados.
